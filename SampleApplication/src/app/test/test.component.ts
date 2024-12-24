@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
 export class TestComponent {
   public name = 'Sreeram';
   public siteUrl = window.location.href;
+  public myId = 'testId';
+  public isDisabled = true;
 
   greetUser(){
     return "Hello "+this.name;
