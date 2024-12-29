@@ -15,7 +15,7 @@ export class TestComponent {
   public isDisabled = true;
   public successClass = "text-success";
   public hasError = true;
-
+  public greeting = ""; 
   public isSpecial = true;
 
   public messageClasses = {
@@ -24,7 +24,18 @@ export class TestComponent {
     "text-special" : this.isSpecial
   }
 
+  public titleStyles = {
+    color:"blue",
+    fontStyle:"italic"
+  }
+
   greetUser(){
     return "Hello "+this.name;
+  }
+
+  onclick(event: Event){
+    console.log(" button was clicked");
+    this.greeting = event.type;
+    console.log(event);
   }
 }
