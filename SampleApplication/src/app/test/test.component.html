@@ -48,10 +48,27 @@ $0.getAttribute('value') returns Vishwas where as $0.value returns Sreeram -->
 
  <!-- Event Binding -->
 
- <button (click)="onclick($event)">Greet</button> 
+ <!-- <button (click)="onclick($event)">Greet</button> 
  <button (click)="greeting='Welcome Sreeram'">Greet2</button>
 
- {{greeting}}
+ {{greeting}} -->
 <!-- --------------------------------------------------------------------------------------------------- -->
 
+<!-- Structural Directives -->
+ <!-- ngIf, ngSwitch, ngFor -->
 
+<div *ngIf="isDisabled; then thenBlock; else elseBlock">
+    
+</div>
+
+<ng-template #thenBlock>
+    <h2>
+        Sreeram
+    </h2>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h2>
+        Name is Hidden
+    </h2>
+</ng-template>
