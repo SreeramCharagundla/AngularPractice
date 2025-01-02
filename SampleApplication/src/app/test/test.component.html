@@ -57,7 +57,7 @@ $0.getAttribute('value') returns Vishwas where as $0.value returns Sreeram -->
 <!-- Structural Directives -->
  <!-- ngIf, ngSwitch, ngFor -->
 
-<div *ngIf="isDisabled; then thenBlock; else elseBlock">
+<!-- <div *ngIf="isDisabled; then thenBlock; else elseBlock">
     
 </div>
 
@@ -71,4 +71,31 @@ $0.getAttribute('value') returns Vishwas where as $0.value returns Sreeram -->
     <h2>
         Name is Hidden
     </h2>
-</ng-template>
+</ng-template> -->
+
+<!-- --------------------------------------------------------------------------------------------------- -->
+
+<!-- ngSwitch -->
+
+<!-- <div [ngSwitch] = "color">
+    <div *ngSwitchCase="'red'">You picked red color</div>
+    <div *ngSwitchCase="'blue'">You picked blue color</div>
+    <div *ngSwitchCase="'green'">You picked green color</div>
+    <div *ngSwitchDefault>Pick again</div>
+</div> -->
+
+<!-- --------------------------------------------------------------------------------------------------- -->
+
+<!-- ngFor -->
+
+<!-- <div *ngFor = "let color of colors; index as i ">
+    <h2>{{i}} {{color}}</h2>
+</div> -->
+
+<!-- --------------------------------------------------------------------------------------------------- -->
+
+<!-- Component Interaction -->
+
+<h2>{{"Hello "+name}}</h2>
+
+<button (click)="fireEvent()"> Send event</button>

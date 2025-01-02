@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,7 +9,15 @@ import { CommonModule } from '@angular/common';
   styleUrl: './test.component.css'
 })
 export class TestComponent {
-  public name = 'Sreeram';
+  
+  @Input('parentData')
+  public name="";
+  
+  @Output()
+  public childEvent = new EventEmitter();
+  
+  public colors = ["red","blue","green","yellow"];
+  public color = "orange";
   public siteUrl = window.location.href;
   public myId = 'testId';
   public isDisabled = true;
@@ -37,5 +45,9 @@ export class TestComponent {
     console.log(" button was clicked");
     this.greeting = event.type;
     console.log(event);
+  }
+
+  fireEvent(){
+    this.childEvent.emit("Hey Sreeram");
   }
 }

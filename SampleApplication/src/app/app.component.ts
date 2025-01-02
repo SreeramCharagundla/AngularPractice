@@ -10,5 +10,7 @@ import { TestComponent } from './test/test.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  public name = "Sreeram";
   title = 'SampleApplication';
+  public message = "";
 }
