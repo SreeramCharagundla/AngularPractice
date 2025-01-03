@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class TestComponent {
   
-  @Input('parentData')
-  public name="";
+  // @Input('parentData')
+  // public name="";
   
   @Output()
   public childEvent = new EventEmitter();
@@ -37,9 +37,9 @@ export class TestComponent {
     fontStyle:"italic"
   }
 
-  greetUser(){
-    return "Hello "+this.name;
-  }
+  // greetUser(){
+  //   return "Hello "+this.name;
+  // }
 
   onclick(event: Event){
     console.log(" button was clicked");
@@ -50,4 +50,15 @@ export class TestComponent {
   fireEvent(){
     this.childEvent.emit("Hey Sreeram");
   }
+
+  // pipes 
+  public name = "Ramesh Babu";
+  public message = "Welcome to Angular";
+  public person = {
+    "firstName":"Sreeram",
+    "lastName":"Charagundla"
+  }
+  public date = new Date();
+
+  
 }
